@@ -16,7 +16,11 @@ public final class Calculator {
             final var left = Integer.parseInt(chunks[0]);
             final var right = Integer.parseInt(chunks[1]);
 
-            return String.valueOf(left / right);
+            if (right > 0) {
+                return String.valueOf(left / right);
+            }
+
+            return "Error: Division by zero";
         }
 
         return "";
