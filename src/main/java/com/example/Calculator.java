@@ -19,6 +19,14 @@ public final class Calculator {
             return String.valueOf(left - right);
         }
 
+        if (expression.matches("\\d+\\*\\d+")) {
+            final var chunks = expression.split("\\*");
+            final var left = Integer.parseInt(chunks[0]);
+            final var right = Integer.parseInt(chunks[1]);
+
+            return String.valueOf(left * right);
+        }
+
         if (expression.matches("\\d+/\\d+")) {
             final var chunks = expression.split("/");
             final var left = Integer.parseInt(chunks[0]);

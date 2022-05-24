@@ -10,6 +10,11 @@ Feature: Four basic operations
     When the calculator evaluates the expression
     Then the result should be "-5"
 
+  Scenario: Multiplication
+    Given user types "4*8"
+    When the calculator evaluates the expression
+    Then the result should be "32"
+
   Scenario: Division
     Given user types "10/5"
     When the calculator evaluates the expression
