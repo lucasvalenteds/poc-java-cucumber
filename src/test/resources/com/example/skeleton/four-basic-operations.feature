@@ -30,3 +30,13 @@ Feature: Four basic operations
     Given user types "20/0"
     When the calculator evaluates the expression
     Then the result should be "Error: Division by zero"
+
+    Scenario Outline: Unknown expression
+      Given user types "<expression>"
+      When the calculator evaluates the expression
+      Then the result should be ""
+
+      Examples:
+      | expression |
+      | 2^3 |
+      | ? |
