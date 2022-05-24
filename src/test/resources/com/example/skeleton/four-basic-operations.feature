@@ -5,6 +5,11 @@ Feature: Four basic operations
     When the calculator evaluates the expression
     Then the result should be "3"
 
+  Scenario: Subtraction
+    Given user types "1-6"
+    When the calculator evaluates the expression
+    Then the result should be "-5"
+
   Scenario: Division
     Given user types "10/5"
     When the calculator evaluates the expression
