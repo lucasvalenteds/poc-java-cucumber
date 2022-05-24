@@ -32,11 +32,11 @@ public final class Calculator {
             final var left = Integer.parseInt(chunks[0]);
             final var right = Integer.parseInt(chunks[1]);
 
-            if (right > 0) {
-                return String.valueOf(left / right);
+            if (right == 0) {
+                return "Error: Division by zero";
             }
 
-            return "Error: Division by zero";
+            return String.valueOf(left / right);
         }
 
         return "";
