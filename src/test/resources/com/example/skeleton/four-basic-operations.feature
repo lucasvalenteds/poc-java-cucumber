@@ -1,9 +1,15 @@
 Feature: Four basic operations
 
-  Scenario: Adding
-    Given user types "1+2"
+  Scenario Outline: Add
+    Given user types "<left>+<right>"
     When the calculator evaluates the expression
-    Then the result should be "3"
+    Then the result should be "<result>"
+
+    Examples:
+      | left | right | result |
+      | 1    | 2     | 3      |
+      | 10   | 20    | 30     |
+      | 100  | 200   | 300    |
 
   Scenario: Subtraction
     Given user types "1-6"
