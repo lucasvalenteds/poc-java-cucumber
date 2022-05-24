@@ -31,12 +31,12 @@ Feature: Four basic operations
     When the calculator evaluates the expression
     Then the result should be "Error: Division by zero"
 
-    Scenario Outline: Unknown expression
-      Given user types "<expression>"
-      When the calculator evaluates the expression
-      Then the result should be ""
+  Scenario Outline: Unknown expression
+    Given user types "<expression>"
+    When the calculator evaluates the expression
+    Then the result should be ""
 
-      Examples:
-      | expression |
-      | 2^3 |
-      | ? |
+    Examples:
+    | expression |
+    | 2^3 |
+    | ? |
