@@ -37,6 +37,6 @@ Feature: Four basic operations
     Then the result should be ""
 
     Examples:
-    | expression |
-    | 2^3 |
-    | ? |
+      | expression |
+      | 2^3        |
+      | ?          |
